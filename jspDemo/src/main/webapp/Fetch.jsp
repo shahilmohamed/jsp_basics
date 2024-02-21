@@ -24,6 +24,7 @@
 		<th>category</th>
 		<th>price</th>
 		<th>delete</th>
+		<th>update</th>
 		<%
 		while (rs.next()) {
 		%>
@@ -33,10 +34,14 @@
 			<td><%=rs.getString(3)%></td>
 			<td><%=rs.getInt(4)%></td>
 			<td><a href="delete.jsp?id=<%=rs.getInt(1)%>">delete</a></td>
+			<td><a href="update.jsp?id=<%=rs.getInt(1) %>">update</a></td>
 		</tr>
 		<%
 		}
 		%>
+		<tr>
+			<td><a href="add.jsp">Add</a></td>
+		</tr>
 	</table>
 </body>
 </html>
